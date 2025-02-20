@@ -1,0 +1,41 @@
+Scenario 1: Recuperar lista de raças com sucesso
+
+Given a API está disponível
+When eu envio uma requisição GET para "/breeds"
+Then devo receber um código de status 200
+
+
+
+Scenario 2: Verificar tempo de resposta da API
+
+Given a API está disponível
+When eu envio uma requisição GET para "/breeds"
+Then devo receber uma resposta dentro do tempo limite aceitável
+
+
+
+Scenario 3: Validar cabeçalho (body) da resposta
+
+Given a API está disponível
+When eu envio uma requisição GET para "/breeds"
+Then devo receber o cabeçalho (body) apropriado, conforme documentação
+And devo receber um código de status 400
+
+
+
+Scenario 4: Requisição com um número de página inválido
+
+Given a API está disponível
+When eu envio uma requisição GET para "/breeds?page=-1"
+Then devo receber um código de status 400
+
+
+
+Scenario 5: Requisição com um token de autenticação inválido
+
+Given a API requer autenticação
+When eu envio uma requisição GET para "/breeds" com um token inválido
+Then devo receber um código de status 401
+
+
+

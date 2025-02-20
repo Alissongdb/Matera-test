@@ -1,0 +1,53 @@
+a) De que forma você reportaria esse bug?
+
+
+Título
+- Título passando a visão macro referente ao defeito
+
+Comportamento esperado
+- Descrever como o fluxo deveria se comportar
+
+Comportamento atual
+- Descrever como o fluxo esta se comportando até chegar ao defeito
+
+Passo a passo para reproduzir
+- Um passo a passo em forma de algoritmo até chegar ao defeito principal, afim de ajudar os desenvolvedores a detectarem o problema
+
+Dados de entrada utilizados
+- Dados como empresa, usuario, produto, pessoa..
+
+Ambiente/versão
+- Qual ambiente e versao esta sendo usado para os testes
+
+Evidências
+- Imagens, Gifs, Vídeos, toda e qualquer prova que demonstre o defeito acontecendo.
+
+Outros
+- Dados como a curl do erro por exemplo, afim de tornar mais facil a localizacao do problema.
+
+Quem identificou
+- Nome do QA que detectou o defeito
+
+Nível de criticidade
+- Definir se o defeito é de Baixa, Media ou Alta prioridade
+
+
+---
+
+
+b) Você identificou que este problema poderia ter sido pego durante os testes da
+feature. O que você poderia fazer para mitigar este bug e possíveis futuros nessa
+feature?
+
+
+Para evitar que esse defeito volte a acontecer e melhorar a qualidade da feature, eu adotaria as seguintes estratégias:
+
+Primeiro criar testes automatizados cobrindo esse cenário específico, o cenario do defeito em si, assim caso volte a ocorrer sera identificado rapidamente antes de liberar qualquer versao. Acredito que mais do que automatizar novos processos, é muito importante automatizar os cenarios dos defeitos em si.
+
+Segundo, ampliar os testes unitários por parte dos desenvolvedores, assim seria uma camada a mais que que o problema tenha que perfurar.
+
+Terceiro, garantir os testes em ambiente de qa e depois homologacao, tendo assim 2 camadas para testes antes de liberar a versao, tendo assim menores chances de erros.
+
+Quarto, adotar estrategias de revisao dos codigos da automacao, com isso reduz o risco de problemas pois terão mais pessoas validando o codigo antes do envio.
+
+e Quinto, realizar mais testes de regressão antes do envio de versoes para producao.

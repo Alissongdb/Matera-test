@@ -1,0 +1,41 @@
+Scenario 1: Buscar um usuário pelo nome completo
+
+Given estou na tela de busca de usuários
+When eu insiro um nome completo válido no campo de filtro "Nome"
+And eu clico no botão ˜Filtrar˜
+Then devo ver os detalhes do usuário correspondente ao nome inserido
+
+
+
+Scenario 2: Buscar usuários por Tipo de Pessoa
+
+Given estou na tela de busca de usuários
+When eu seleciono um Tipo de Pessoa válido no campo de filtro "Tipo de Pessoa"
+And e eu clico em ˜Filtrar˜
+Then devo ver uma lista de usuários com o tipo de pessoa selecionada
+
+
+
+Scenario 3: Buscar usuários por email
+
+Given estou na tela de busca de usuários
+When eu informo um email válido no campo de filtro "email"
+And e eu clico em ˜Filtrar˜
+Then devo ver uma lista de usuários que possuem o email informado
+
+
+
+Scenario 4: Buscar com caracteres inválidos no campo de nome
+
+Given estou na tela de busca de usuários
+When eu insiro caracteres especiais "@#$%^&*" no campo de filtro "Nome"
+And eu clico no botão ˜Filtrar˜
+Then devo ver uma mensagem de erro indicando um formato de entrada inválido
+
+
+
+Scenario 5: Buscar sem preencher nenhum filtro
+
+Given estou na tela de busca de usuários
+When eu clico no botão "Filtrar" sem preencher nenhum campo de filtro
+Then devo ver uma mensagem de erro indicando que pelo menos um filtro deve ser utilizado
